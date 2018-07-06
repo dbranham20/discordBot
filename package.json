@@ -1,0 +1,13 @@
+{
+    "name": "pkp-bot",
+    "version": "0.1.0",
+    "description": "A bot for the PKP Gamers Server",
+    "main": "bot.js",
+    "author": "Daniel Branham",
+    "dependencies": {
+        "dblapi.js": "^2.1.0",
+        "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+        "discord.js": "^11.3.2",
+        "winston": "^3.0.0"
+    }
+}
