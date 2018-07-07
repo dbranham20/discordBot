@@ -27,6 +27,10 @@ client.on("guildDelete", guild => {
     client.user.setActivity(`Serving ${client.guilds.size} server`);
 });
 
+console.log("* \r");
+console.log("* \r");
+console.log("* \r");
+
 
 client.on("message", async message => {
     // This event will run on every single message received, from any channel or DM.
@@ -53,6 +57,7 @@ client.on("message", async message => {
   
     if(args === "say") { //make the bot say anything
         const sayMessage = args.join(" ");
+        console.log("User called the !say function");
         message.delete().catch(O_o=>{}); //delete command message
         message.channel.send(sayMessage); //send copied message
     }
@@ -75,18 +80,21 @@ client.on("message", async message => {
     if(args === "good bot") { //Cale wanted it
         
         const sayMessage = "You're too kind " + ":grin:";
+        console.log("User called the !good bot function");
         message.channel.send(sayMessage);
     }
 
     if(args === "bad bot") { //Cale also wanted it
         
         const sayMessage = "I'm sorry... " + ":cry:";
+        console.log("User called the !bad bot function");
         message.channel.send(sayMessage);
     }
 
     if(args === "joke") { //dumbest joke
         
         const sayMessage = "Your mom.";
+        console.log("User called the !joke function");
         message.channel.send(sayMessage);
     }
 
@@ -99,10 +107,9 @@ client.on("message", async message => {
                             "**!good bot** - Thanks! \r" +
                             "**!bad bot** - awhh.... \r" +
                             "**!joke** - It's a good one. \r";
+        
+        console.log("User called the !help function");
         message.channel.send(sayMessage); //sends message
-    
-    
-    
     }
 });
 
